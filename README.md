@@ -2,9 +2,10 @@
 ## 使用 spring cloud config
 1. 两个组件构成：config server + config client
 2. 新建项目是需要添加 Eureka Server 依赖和 Config Server 依赖
-3. 为什么使用 spring cloud config？
-    - 
-    - 
+3. 为什么使用 spring cloud config 统一配置中心？
+    - 更加方便维护
+    - 配置内容更加安全，账号密码不放到order，product等项目里
+    - 更新配置不需要重启项目
 4. 注册到 eureka server
     - 作为服务在启动项加上 @EnableDiscoveryClient 注解
     - application.properties 也需要添加上 eureka server 配置:eureka.client.service-url.defaultZone=http://localhost:8761/eureka/
